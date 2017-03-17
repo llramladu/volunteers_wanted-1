@@ -7,5 +7,6 @@ class User < ActiveRecord::Base
 
 	has_many :user_event_relationships
 	has_many :events, through: :user_event_relationships
-	
+	has_many :user_position_relationships
+	has_many :positions, through: :user_position_relationships
 end

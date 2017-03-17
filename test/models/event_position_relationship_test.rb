@@ -6,7 +6,7 @@ class EventPositionRelationshipTest < ActiveSupport::TestCase
   # end
 
   test "an event has many positions" do
-    event = Event.create(id: 27)
+    event = Event.create(id: 1027, name: "eventful event", description: "This is an event", date: DateTime.current, endDate: DateTime.current)
     position1 = Position.create(id: 55, name: "My position", description: "blacksmith")
     position2 = Position.create(id: 56, name: "My position", description: "blacksmith")
 

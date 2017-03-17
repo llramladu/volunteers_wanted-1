@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  validate_presence_of :name, :description, :date, :endDate
+
   has_many :user_event_relationships
   has_many :users, through: :user_event_relationships
 
@@ -7,4 +9,7 @@ class Event < ActiveRecord::Base
 
   has_many :event_position_relationships
   has_many :positions, through: :event_position_relationships
+
+  has_many :event_trait_relationships
+  has_many :traits, through: :event_trait_relationships
 end

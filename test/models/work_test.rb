@@ -4,7 +4,7 @@ class WorkTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
-  test "work requires name" do
+  test "work requires description" do
     work = Work.new
     assert_not work.save
 

@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170317031621) do
+ActiveRecord::Schema.define(version: 20170317043155) do
 
   create_table "event_position_relationships", force: :cascade do |t|
     t.integer  "event_id"
     t.integer  "position_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "event_trait_relationships", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "trait_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -31,6 +38,7 @@ ActiveRecord::Schema.define(version: 20170317031621) do
     t.string   "location"
     t.boolean  "reocurring"
     t.string   "contact"
+    t.string   "description"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -41,6 +49,13 @@ ActiveRecord::Schema.define(version: 20170317031621) do
   create_table "organization_event_relationships", force: :cascade do |t|
     t.integer  "organization_id"
     t.integer  "event_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "organization_trait_relationships", force: :cascade do |t|
+    t.integer  "organization_id"
+    t.integer  "trait_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -82,6 +97,13 @@ ActiveRecord::Schema.define(version: 20170317031621) do
     t.integer  "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_position_relationships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "position_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

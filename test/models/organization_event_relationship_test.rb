@@ -2,8 +2,8 @@ require 'test_helper'
 
 class OrganizationEventRelationshipTest < ActiveSupport::TestCase
   test "an organization is related to an event" do
-  	organization = Organization.create(id: 55)
-  	event = Event.create(id: 55)
+  	organization = Organization.create(id: 55, name: "test", password: "password", email: "email@email.com", phoneNum: "6085553545")
+  	event = Event.create(id: 55, name: "working", description: "working", date: DateTime.current, endDate: DateTime.current)
   	organization.organization_event_relationships.create(event: event)
 
   	relationships = organization.events
