@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'devise'
 
 class PositionsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
     @position = positions(:one)
   end

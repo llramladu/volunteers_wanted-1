@@ -17,4 +17,7 @@ class User < ActiveRecord::Base
 
   has_many :user_trait_relationships
   has_many :traits, through: :user_trait_relationships
+  
+  has_many :user_skill_relationships
+  has_many :skills, through: :user_skill_relationships
 end

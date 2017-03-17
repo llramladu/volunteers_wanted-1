@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
     @user = users(:one)
   end
@@ -16,13 +18,15 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create user" do
-    assert_difference('User.count') do
-      post :create, user: { email: @user.email, password: @user.password, name: @user.name, phoneNum: @user.phoneNum }
-    end
+# create and update handled and tested by devise
 
-    assert_redirected_to user_path(assigns(:user))
-  end
+#  test "should create user" do
+#    assert_difference('User.count') do
+#      post :create, user: { email: @user.email, password: @user.password, name: @user.name, phoneNum: @user.phoneNum }
+#    end
+
+#    assert_redirected_to user_path(assigns(:user))
+#  end
 
   test "should show user" do
     get :show, id: @user
@@ -34,10 +38,10 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update user" do
-    patch :update, id: @user, user: { email: @user.email, password: @user.password, name: @user.name, phoneNum: @user.phoneNum }
-    assert_redirected_to user_path(assigns(:user))
-  end
+#  test "should update user" do
+#    patch :update, id: @user, user: { email: @user.email, password: @user.password, name: @user.name, phoneNum: @user.phoneNum }
+#    assert_redirected_to user_path(assigns(:user))
+#  end
 
   test "should destroy user" do
     assert_difference('User.count', -1) do

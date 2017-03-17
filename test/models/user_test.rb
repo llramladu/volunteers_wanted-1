@@ -7,6 +7,6 @@ class UserTest < ActiveSupport::TestCase
   test "should not save user without required fields" do
     user = User.new
     assert_not user.valid?
-    assert_equal [:name, :email, :password, :phoneNum], user.errors.keys
+    assert_equal [:email, :password, :name, :phoneNum], user.errors.keys
   end 
 end

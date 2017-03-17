@@ -1,10 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  email: MyText
-  password: MyText
-  name: MyText
-  phoneNum: MyText
+  email: email@email.com
+  password: passw0rd
+  name: Bruce
+  phoneNum: 4559876212
 two:
   email: MyText
   password: MyText

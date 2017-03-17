@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class TraitsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
     @trait = traits(:one)
   end
