@@ -6,4 +6,7 @@ class Trait < ActiveRecord::Base
 
   has_many :event_trait_relationships
   has_many :events, through: :event_trait_relationships
+
+  has_many :user_trait_relationships
+  has_many :users, through: :user_trait_relationships
 end
