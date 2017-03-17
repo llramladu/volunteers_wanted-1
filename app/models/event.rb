@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  validate_presence_of :name, :description, :date, :endDate
+  validates_presence_of :name, :description, :date, :endDate
 
   has_many :user_event_relationships
   has_many :users, through: :user_event_relationships
