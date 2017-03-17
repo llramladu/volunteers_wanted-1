@@ -20,4 +20,10 @@ class User < ActiveRecord::Base
   
   has_many :user_skill_relationships
   has_many :skills, through: :user_skill_relationships
+
+  has_many :user_volunteer_relationships
+  has_many :volunteers, through: :user_volunteer_relationships
+
+  has_many :user_work_relationships
+  has_many :works, through: :user_work_relationships
 end
