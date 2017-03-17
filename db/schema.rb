@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170317021014) do
+ActiveRecord::Schema.define(version: 20170317022501) do
 
   create_table "events", force: :cascade do |t|
     t.text     "name"
@@ -42,6 +42,32 @@ ActiveRecord::Schema.define(version: 20170317021014) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text     "biography"
+    t.string   "email"
+    t.string   "password"
+    t.string   "name"
+    t.string   "phoneNum"
+    t.string   "url"
+    t.string   "location"
+    t.integer  "size"
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "traits", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_event_relationships", force: :cascade do |t|
@@ -63,6 +89,18 @@ ActiveRecord::Schema.define(version: 20170317021014) do
     t.datetime "birthDate"
     t.datetime "availabilityBegin"
     t.datetime "availabilityEnd"
+  end
+
+  create_table "volunteers", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "works", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
