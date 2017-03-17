@@ -3,7 +3,10 @@
 one:
   email: MyText
   password: MyText
-
+  name: MyText
+  phoneNum: MyText
 two:
   email: MyText
   password: MyText
+  name: MyText
+  phoneNum: MyText

@@ -11,13 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170316000412) do
+ActiveRecord::Schema.define(version: 20170317021014) do
 
   create_table "events", force: :cascade do |t|
     t.text     "name"
     t.date     "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.datetime "endDate"
+    t.integer  "volunteersNeeded"
+    t.string   "compensation"
+    t.string   "location"
+    t.boolean  "reocurring"
+    t.string   "contact"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -48,8 +54,15 @@ ActiveRecord::Schema.define(version: 20170316000412) do
   create_table "users", force: :cascade do |t|
     t.text     "email"
     t.text     "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "name"
+    t.string   "biography"
+    t.string   "education"
+    t.string   "phoneNum"
+    t.datetime "birthDate"
+    t.datetime "availabilityBegin"
+    t.datetime "availabilityEnd"
   end
 
 end
