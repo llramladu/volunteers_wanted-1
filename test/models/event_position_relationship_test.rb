@@ -6,16 +6,15 @@ class EventPositionRelationshipTest < ActiveSupport::TestCase
   # end
 
   test "an event has many positions" do
-    event = Event.create(id: 27))
-    position1 = Position.create(id: 55)
-    position2 = Position.create(id: 56)
+    event = Event.create(id: 27)
+    position1 = Position.create(id: 55, name: "My position", description: "blacksmith")
+    position2 = Position.create(id: 56, name: "My position", description: "blacksmith")
 
     event.event_position_relationships.create(position: position1)
     event.event_position_relationships.create(position: position2)
 
 
     relationships = event.positions
-    puts relationships.count
     assert relationships.count == 2
   end
 end
