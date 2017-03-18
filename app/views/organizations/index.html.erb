@@ -1,0 +1,15 @@
+<% @organizations.each do |organization| %>
+  <div class = "card">
+    <div class = "card-header">
+      <%= organization.location %>
+    </div>
+    <div class = "card-block">
+     <h4 class = "card-title"><%= organization.name %></h4>
+     <p class = "card-text"><%= organization.biography %></p>
+     <a href = "#" class = "btn btn-primary">Follow</a>
+     <%= link_to 'Show', organization, class: "btn btn-primary" =%>
+   </div>
+  </div>
+<% end %>
+
+<%= link_to 'New Organization', new_organization_path %>
