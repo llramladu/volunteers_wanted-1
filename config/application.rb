@@ -26,5 +26,7 @@ module VolunteersWanted
     config.eager_load = true
     config.autoload_paths += %W(#{config.root}/lib)
 
-  end
+
+    config.web_console.whitelisted_ips = '71.202.235.76' 
+ end
 end

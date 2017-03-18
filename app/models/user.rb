@@ -26,4 +26,7 @@ class User < ActiveRecord::Base
 
   has_many :user_work_relationships
   has_many :works, through: :user_work_relationships
+
+  has_many :user_organization_relationships
+  has_many :organizations, through: :user_organization_relationships
 end

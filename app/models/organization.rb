@@ -7,4 +7,7 @@ class Organization < ActiveRecord::Base
 
   has_many :organization_trait_relationships
   has_many :traits, through: :organization_trait_relationships
+
+  has_many :user_organization_relationships
+  has_many :users, through: :user_organization_relationships
 end

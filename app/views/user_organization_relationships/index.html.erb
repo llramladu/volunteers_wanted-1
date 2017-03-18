@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Organization Relationships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_organization_relationships.each do |user_organization_relationship| %>
+      <tr>
+        <td><%= link_to 'Show', user_organization_relationship %></td>
+        <td><%= link_to 'Edit', edit_user_organization_relationship_path(user_organization_relationship) %></td>
+        <td><%= link_to 'Destroy', user_organization_relationship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User organization relationship', new_user_organization_relationship_path %>

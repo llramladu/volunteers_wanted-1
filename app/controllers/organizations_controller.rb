@@ -1,8 +1,12 @@
+
 class OrganizationsController < ApplicationController
   before_action :set_organization, only:[:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
+    @user = User.find(current_user.id)
     @organizations = Organization.all
+    @user_organization_relationship = UserOrganizationRelationship.new
   end
 
   def new
