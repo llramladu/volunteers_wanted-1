@@ -7,7 +7,11 @@ class OrganizationTraitRelationshipTest < ActiveSupport::TestCase
 
   test "a trait is related to an organization" do
     trait = Trait.create(id: 100, name: "Saucy")
-    organization = Organization.create(id: 100, email: "test", password: "password", biography: "Skateboards for Everybody", name: "Organization", phoneNum: "6678823982")
+    trait.save
+
+    organization = Organization.create!(id: 100, email: "test@hello.com", password: "password", biography: "Skateboards for Everybody", name: "Organization", phoneNum: "6678823982")
+    organization.save
+
     organization.organization_trait_relationships.create(trait: trait)
 
     relationships = organization.traits

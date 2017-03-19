@@ -1,10 +1,14 @@
 
 class OrganizationsController < ApplicationController
   before_action :set_organization, only:[:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_organization!, only:[:edit, :update, :destroy]
 
   def index
-    @user = User.find(current_user.id)
+    @user = nil
+    if current_user
+      @user = User.find(current_user.id)
+    end
+
     @organizations = Organization.all
     @user_organization_relationship = UserOrganizationRelationship.new
   end
@@ -62,6 +66,6 @@ class OrganizationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def organization_params
-      params.require(:organization).permit(:biography, :email, :password, :name, :phoneNum, :url, :location, :size)
+      params.require(:organization).permit(:biography, :email, :password, :name, :phoneNum, :url, :location, :size, :password_confirmation)
     end
 end

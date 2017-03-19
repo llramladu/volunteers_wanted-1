@@ -23,7 +23,7 @@ class UserOrganizationRelationshipsControllerTest < ActionController::TestCase
       post :create, user_organization_relationship: {  }
     end
 
-    assert_redirected_to user_organization_relationship_path(assigns(:user_organization_relationship))
+    assert_redirected_to organizations_path
   end
 
   test "should show user_organization_relationship" do

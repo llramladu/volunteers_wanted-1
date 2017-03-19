@@ -24,7 +24,6 @@ class UserOrganizationRelationshipsController < ApplicationController
   # POST /user_organization_relationships
   # POST /user_organization_relationships.json
   def create
-    puts params
     @user_organization_relationship = UserOrganizationRelationship.new({:user_id => params[:user_id], :organization_id => params[:organization_id]})
 
     respond_to do |format|

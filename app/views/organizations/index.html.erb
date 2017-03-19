@@ -6,7 +6,9 @@
     <div class = "card-block">
      <h4 class = "card-title"><%= organization.name %></h4>
      <p class = "card-text"><%= organization.biography %></p>
-     <%= link_to "Follow", user_organization_relationships_path(user_id: @user.id, organization_id: organization.id), method: :post %>
+     <% if @user %>
+       <%= link_to "Follow", user_organization_relationships_path(user_id: @user.id, organization_id: organization.id), method: :post %>
+     <% end %>
      <%= link_to "Show", organization_path(id: organization.id), class: "btn btn-primary" %>
    </div>
   </div>
