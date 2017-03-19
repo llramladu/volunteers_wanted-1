@@ -12,13 +12,41 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
+    <%= f.label :name, 'Name of Event:' %><br>
+    <%= f.text_field :name  %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.label :description, 'Description of Event:' %><br>
+    <%= f.text_area :description %>
   </div>
+  <div class="field">
+    <%= f.label :date, 'Start Date:' %><br>
+    <%= f.datetime_local_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :endDate, 'End Date:' %><br>
+    <%= f.datetime_local_field :endDate %>
+  </div>
+  <div class="field">
+    <%= f.label :reocurring, 'Reocurring Event?:' %>
+    <%= f.check_box :reocurring %>
+  </div> 
+  <div class="field">
+    <%= f.label :volunteersNeeded, 'Number of Volunteers Needed:' %><br>
+    <%= f.number_field :volunteersNeeded %>
+  </div>  
+  <div class="field">
+    <%= f.label :compensation, 'Compensation:' %><br>
+    <%= f.text_area :compensation %>
+  </div>
+  <div class="field">
+    <%= f.label :location, 'Location' %><br>
+    <%= f.text_area :location %>
+  </div> 
+  <div class="field">
+    <%= f.label :contact, 'Volunteers Need to Conatact:' %><br>
+    <%= f.text_area :contact %>
+  </div> 
   <div class="actions">
     <%= f.submit %>
   </div>

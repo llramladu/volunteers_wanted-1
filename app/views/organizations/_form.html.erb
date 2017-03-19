@@ -13,30 +13,45 @@
 
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
+    <%= f.label :name, 'Name of Organization:' %><br>
+    <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_area :email %>
+    <%= f.label :password, 'Password:'  %><br>
+    <%= f.password_field :password %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_area :password %>
+    <%= f.label :email, 'Email:' %><br>
+    <%= f.email_field :email %>
   </div>
 
   <div class="field">
-    <%= f.label :phoneNum %><br>
-    <%= f.text_area :phoneNum %>
+    <%= f.label :phoneNum, 'Phone Number:' %><br>
+    <%= f.phone_field :phoneNum %>
   </div>
 
   <div class="field">
-    <%= f.label :biography %><br>
+    <%= f.label :biography, 'Biography of Organization:' %><br>
     <%= f.text_area :biography %>
   </div>
-  
+
+  <div class="field">
+    <%= f.label :url, 'Organization Website:' %><br>
+    <%= f.url_field :url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location, 'Location of Organization:' %><br>
+    <%= f.text_area :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :size, 'Size of Organization:' %><br>
+    <%= f.number_field :size %>
+  </div>  
+
   <div class="actions">
     <%= f.submit %>
   </div>
