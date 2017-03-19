@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class UserOrganizationRelationshipsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
     @user_organization_relationship = user_organization_relationships(:one)
   end
@@ -35,7 +37,7 @@ class UserOrganizationRelationshipsControllerTest < ActionController::TestCase
   end
 
   test "should update user_organization_relationship" do
-    patch :update, id: @user_organization_relationship, user_organization_relationship: {  }
+    patch :update, id: @user_organization_relationship, user_organization_relationship: {user_id: 10, organization_id: 11 }
     assert_redirected_to user_organization_relationship_path(assigns(:user_organization_relationship))
   end
 
