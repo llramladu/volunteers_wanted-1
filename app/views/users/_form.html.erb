@@ -12,17 +12,50 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_area :email %>
+    <%= f.label :email, 'Email:' %><br>
+    <%= f.email_field :email %>
   </div>
+
   <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_area :password %>
+    <%= f.label :password, 'Password:' %><br>
+    <%= f.password_field :password %>
   </div>
+
+  <div class="field">
+    <%= f.label :name, 'Name:' %><br>
+    <%= f.text_field :name %>
+  </div>
+
    <div class="field">
-    <%= f.label :phoneNum %><br>
-    <%= f.text_area :phoneNum %>
+    <%= f.label :phoneNum, 'Phone Number:' %><br>
+    <%= f.phone_field :phoneNum %>
   </div>
+
+  <div class="field">
+    <%= f.label :biography, 'User Profile:' %><br>
+    <%= f.text_area :biography %>
+  </div>
+
+  <div class="field">
+    <%= f.label :education, 'Education:' %><br>
+    <%= f.text_area :education %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthDate, 'Birth Date:' %><br>
+    <%= f.date_field :birthDate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :availabilityBegin, 'Availability to Begin:' %><br>
+    <%= f.date_field :availabilityBegin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :availabilityEnd, 'Available Until:' %><br>
+    <%= f.date_field :availabilityEnd %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

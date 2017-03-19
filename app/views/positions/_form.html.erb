@@ -11,6 +11,16 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :name, 'Name of Position:' %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, 'Description of Position:' %><br>
+    <%= f.text_area :description %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
