@@ -2,6 +2,7 @@
 class OrganizationsController < ApplicationController
   before_action :set_organization, only:[:show, :edit, :update, :destroy]
   before_action :authenticate_organization!, only:[:edit, :update, :destroy]
+  skip_before_filter :require_no_authentication, only: [:create]
 
   def index
     @user = nil
@@ -25,7 +26,9 @@ class OrganizationsController < ApplicationController
   end
 
   def create
+
     @organization = Organization.new(organization_params)
+    p @organization
 
       respond_to do |format|
         if @organization.save
