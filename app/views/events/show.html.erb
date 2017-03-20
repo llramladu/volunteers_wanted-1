@@ -4,9 +4,14 @@
   <strong>Event Name:</strong>
   <%= @event.name %>
 </p>
+
 <p>
   <strong>Event Description:</strong>
-  <%= @event.date %>
+  <%= @event.description %>
+</p>
+<p>
+  <strong>Point of Contact:</strong>
+  <%= @event.contact %>
 </p>
 <p>
   <strong>Start Date:</strong>
@@ -15,8 +20,28 @@
 
 <p>
   <strong>End Date:</strong>
-  <%= @event.date %>
+  <%= @event.endDate %>
 </p>
 
+<p>
+  <strong>Number of Volunteers Needed:</strong>
+  <%= @event.volunteersNeeded %>
+</p>
+
+
+<p>
+  <strong>Compensation:</strong>
+  <%= @event.compensation %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>Recurring Event?:</strong>
+  <%= @event.reocurring %>
+</p>
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

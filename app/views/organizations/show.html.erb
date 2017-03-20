@@ -5,5 +5,32 @@
   <%= @organization.name %>
 </p>
 
+<p>
+  <strong>Email:</strong>
+  <%= @organization.email %>
+</p>
+<p>
+  <strong>Phone Number:</strong>
+  <%= @organization.phoneNum %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @organization.url %>
+</p>
+<p>
+  <strong>Biography:</strong>
+  <%= @organization.biography %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @organization.location %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @organization.size %>
+</p>
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>

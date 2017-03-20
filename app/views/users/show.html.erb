@@ -10,5 +10,35 @@
   <%= @user.email %>
 </p>
 
+<p>
+  <strong>Phone Number:</strong>
+  <%= @user.phoneNum %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @user.biography %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @user.education %>
+</p>
+
+<p>
+  <strong>Birth Date:</strong>
+  <%= @user.birthDate %>
+</p>
+
+<p>
+  <strong>Availability to Start:</strong>
+  <%= @user.availabilityBegin %>
+</p>
+
+<p>
+  <strong>Available Until:</strong>
+  <%= @user.availabilityEnd %>
+</p>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
